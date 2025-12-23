@@ -1,46 +1,41 @@
 ---
 seo:
-  title: Write beautiful docs with Markdown
-  description: Ship fast, flexible, and SEO-optimized documentation with beautiful design out of the box. Docus brings together the best of the Nuxt ecosystem. Powered by Nuxt UI.
+  title: HAER HCM - Modern Human Capital Management
+  description: Enterprise-grade Human Capital Management system featuring multi-tenant architecture, effective dating, and comprehensive workforce management. Built with NestJS, Nuxt 4, and PostgreSQL.
 ---
 
 ::u-page-hero
 #title
-Write beautiful docs with Markdown.
+Next-Generation Human Capital Management
 
 #description
-Ship fast, flexible, and SEO-optimized documentation with beautiful design out of the box. :br Docus brings the best of the Nuxt ecosystem.
+Enterprise-grade HCM platform with multi-tenant architecture, effective dating for complete audit trails, and a modern API-first design. :br Manage your entire workforce lifecycle with confidence.
 
 #links
   :::u-button
   ---
   color: neutral
   size: xl
-  to: en/getting-started/installation
+  to: /en/getting-started/introduction
   trailing-icon: i-lucide-arrow-right
   ---
-  Get started
+  Get Started
   :::
 
   :::u-button
   ---
   color: neutral
-  icon: simple-icons-github
+  icon: i-lucide-book-open
   size: xl
-  to: https://github.com/nuxt-content/docus
+  to: /en/product/organization
   variant: outline
   ---
-  Star on GitHub
+  Explore Features
   :::
 
 #headline
-  :::u-button
-  ---
-  size: sm
-  to: https://github.com/nuxt-content/docus/releases/tag/v5.0.0
-  variant: outline
-  ---
-  Docus v5 →
+  :::u-button{size="sm" to="/en/getting-started/quick-start" variant="outline"}
+  Quick Start Guide
   :::
 ::
 
@@ -50,264 +45,133 @@ Ship fast, flexible, and SEO-optimized documentation with beautiful design out o
     ---
     spotlight: true
     class: group col-span-2 lg:col-span-1
-    target: _blank
-    to: https://nuxt.com
     ---
-    :floating-nuxt
-
     #title
-    Built with [Nuxt]{.text-primary}
+    [HAER API]{.text-primary} Backend
 
     #description
-    Optimized by the most famous Vue framework. Docus gives you everything you need to build fast, performant, and SEO-friendly websites.
+    Powerful REST API built with NestJS + Fastify + Prisma. Features complete multi-tenancy, role-based access control, and enterprise-grade security with JWT authentication.
+    ::::
+
+    ::::u-page-card
+    ---
+    spotlight: true
+    class: group col-span-2 lg:col-span-1
+    ---
+    #title
+    [HAER Web]{.text-primary} Frontend
+
+    #description
+    Modern, responsive dashboard built with Nuxt 4 + Vue 3, shadcn-vue components, and TailwindCSS. Provides intuitive workforce management with beautiful visualizations.
     ::::
 
     ::::u-page-card
     ---
     spotlight: true
     class: col-span-2
-    target: _blank
-    to: https://ui.nuxt.com
     ---
-      :::::u-color-mode-image
-      ---
-      height: 320
-      width: 859
-      alt: Beautiful visual powered by UI
-      class: w-full h-80 object-cover rounded-lg
-      dark: /landing/dark/templates-ui-pro.webp
-      light: /landing/light/templates-ui-pro.webp
-      ---
-      :::::
-
     #title
-    Powered by [Nuxt UI]{.text-primary}
+    [Flexible]{.text-primary} Architecture
 
     #description
-    Beautiful out of the box, minimal by design but highly customizable. Docus leverages Nuxt UI to give you the best docs writing experience with zero boilerplate, just focus on your content.
-    ::::
-
-    ::::u-page-card
-    ---
-    spotlight: true
-    class: col-span-2
-    target: _blank
-    ---
-      :::::tabs
-        ::::::tabs-item{.mt-5 icon="i-lucide-eye" label="Preview"}
-          :::::::div{.flex.flex-col.gap-4}
-            ::::::::note{.my-0}
-            Here's some additional information for you.
-            ::::::::
-
-            ::::::::tip{.my-0}
-            Here's a helpful suggestion.
-            ::::::::
-
-            ::::::::warning{.my-0}
-            Be careful with this action as it might have unexpected results.
-            ::::::::
-
-            ::::::::caution{.my-0}
-            This action cannot be undone.
-            ::::::::
-          :::::::
-        ::::::
-
-        ::::::tabs-item
-        ---
-        class: mt-5 mb-2 text-xs overflow-x-auto
-        icon: i-lucide-code
-        label: Code
-        ---
-        ```mdc
-        ::note
-        Here's some additional information.
-        ::
-
-        ::tip
-        Here's a helpful suggestion.
-        ::
-
-        ::warning
-        Be careful with this action as it might have unexpected results.
-        ::
-
-        ::caution
-        This action cannot be undone.
-        ::
-        ```
-        ::::::
-      :::::
-
-    #title
-    Enhanced Markdown syntax by [Nuxt Content]{.text-primary}
-
-    #description
-    The only thing you need to take care about is writing your content. Write your pages in Markdown and extend with MDC syntax to embed Nuxt UI or custom Vue components. Structure, routing, and rendering are handled for you.
+    Model complex organizational structures with 5 configurable hierarchy levels (L1-L5), 4-tier job architecture (J1-J4), and unlimited custom fields to adapt to any business requirement.
     ::::
 
     ::::u-page-card
     ---
     spotlight: true
     class: col-span-2 md:col-span-1
-    target: _blank
     ---
-      :::::div{.bg-elevated.rounded-lg.p-3.overflow-x-auto}
-      ```ts [app.config.ts]
-      export default defineAppConfig({
-        ui: {
-          colors: {
-            primary: 'green',
-            secondary: 'sky',
-          },
-        },
-        socials: {
-          x: 'https://x.com/nuxt_js',
-          nuxt: 'https://nuxt.com'
-        }
-      })
+      :::::div{.bg-elevated.rounded-lg.p-4.text-sm.font-mono.overflow-x-auto}
+      ```ts
+      // Effective Dating (Time-Travel)
+      const employee = await service
+        .findByCode(
+          "EMP001",
+          tenantId,
+          { asOf: new Date("2024-01-15") }
+        );
+      // Returns state as of Jan 15, 2024
       ```
       :::::
 
     #title
-    Customize with [Nuxt App Config]{.text-primary}
+    [Effective Dating]{.text-primary} & Audit Trails
 
     #description
-    Update colors, social links, header logos and component styles globally using the `app.config.ts`, no direct code modifications required.
+    Complete temporal data management with version history. Query historical states, track all changes, and maintain regulatory compliance.
     ::::
 
     ::::u-page-card
     ---
     spotlight: true
-    class: col-span-2 md:col-span-1 min-h-[450px]
-    target: _blank
+    class: col-span-2 md:col-span-1
     ---
-    :color-mode-switch
+      :::::div{.bg-elevated.rounded-lg.p-4.text-sm.font-mono.overflow-x-auto}
+      ```ts
+      // Multi-Tenant Isolation
+      @UseGuards(TenantGuard)
+      async findAll(
+        @TenantId() tenantId: string
+      ) {
+        return this.service.findAll(tenantId);
+      }
+      ```
+      :::::
 
     #title
-    [Nuxt Color]{.text-primary} mode
+    [Multi-Tenant]{.text-primary} by Design
 
     #description
-    Built-in dark mode provided, no configuration required.
+    Native multi-tenancy with complete data isolation. Support multiple clients in a single deployment with separate workspaces.
     ::::
 
     ::::u-page-card
     ---
     spotlight: true
     class: col-span-2
-    target: _blank
     ---
-      :::::u-color-mode-image
-      ---
-      height: 554
-      width: 859
-      alt: Built-in navigation and full-text search
-      class: rounded-lg
-      dark: /landing/dark/command-menu.png
-      format: webp
-      light: /landing/light/command-menu.png
-      loading: lazy
-      ---
-      :::::
-
     #title
-    Built-in navigation and [full-text search]{.text-primary}
+    Comprehensive [Product Modules]{.text-primary}
 
     #description
-    Only focus on ordering your content, Docus handles the search modal and auto-generates the side navigation for you.
-    ::::
-
-    ::::u-page-card
-    ---
-    spotlight: true
-    class: col-span-2
-    target: _blank
-    ---
-      :::::browser-frame
-      :video{.rounded-md controls loop playsinline src="https://res.cloudinary.com/nuxt/video/upload/v1747230893/studio/wzt9zfmdvk7hgmdx3cnt.mp4"}
-      :::::
-
-    #title
-    Collaborate on [Nuxt Studio]{.text-primary}
-
-    #description
-    Write and manage your content visually, with zero Markdown knowledge required. Let your non technical colleagues collaborate on the documentation and integrate Vue components without code skills.
+    Complete workforce management suite: organizational structure, job architecture, employee management, attendance tracking, and leave management.
     ::::
 
     ::::u-page-card
     ---
     spotlight: true
     class: col-span-2 lg:col-span-1
-    target: _blank
-    to: https://image.nuxt.com/
     ---
-      :::::div{.flex-1.flex.items-center.justify-center}
-        ::::::u-color-mode-image
-        ---
-        alt: Nuxt Image visual
-        class: w-[30%] lg:w-[70%] my-12 lg:my-0
-        dark: /landing/dark/nuxt-image.svg
-        light: /landing/light/nuxt-image.svg
-        ---
-        ::::::
-      :::::
-
     #title
-    [Nuxt Image]{.text-primary} optimization
+    Modern [Backend Stack]{.text-primary}
 
     #description
-    Docus automatically converts Markdown images to use `<NuxtImg>` .
+    Built on battle-tested technologies: NestJS + Fastify for high performance, Prisma ORM for type-safe database access, and PostgreSQL for reliability.
     ::::
 
     ::::u-page-card
     ---
     spotlight: true
     class: col-span-2 lg:col-span-1
-    target: _blank
-    to: /en/concepts/internationalization
     ---
-      :::::u-color-mode-image
-      ---
-      height: 195
-      width: 403
-      alt: Internationalization illustration
-      class: w-full my-12 lg:my-0
-      dark: /landing/dark/i18n.svg
-      light: /landing/light/i18n.svg
-      ---
-      :::::
-
     #title
-    [Internationalization]{.text-primary} support
+    Cutting-Edge [Frontend Stack]{.text-primary}
 
     #description
-    Built-in i18n support with automatic routing and content management. Create multi-language documentation effortlessly.
+    Beautiful interface with Nuxt 4 + Vue 3, TailwindCSS v4, shadcn-vue components, dark mode support, and optimized performance with Vite.
     ::::
 
     ::::u-page-card
     ---
     spotlight: true
     class: col-span-2
-    target: _blank
-    to: /en/ai/mcp
     ---
-      :::::u-color-mode-image
-      ---
-      height: 400
-      width: 859
-      alt: Native MCP server and AI-ready content illustration
-      class: w-full h-auto rounded-lg translate-y-10
-      dark: /landing/dark/mcp.svg
-      light: /landing/light/mcp.svg
-      ---
-      :::::
-
     #title
-    [AI-Ready]{.text-primary} with native MCP
+    [Production-Ready]{.text-primary} from Day One
 
     #description
-    Built-in Model Context Protocol server connects your documentation to AI tools like Cursor, VS Code, and Claude. Automatic generation of `llms.txt` and `llms-full.txt` files for seamless LLM integration.
+    Built for enterprise: JWT authentication, RBAC security, OpenTelemetry observability, and containerized deployment options.
     ::::
   :::
 ::
